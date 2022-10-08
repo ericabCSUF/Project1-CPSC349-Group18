@@ -40,10 +40,10 @@ pagination:
             <ul>
                 <div style="text-align: center; list-style position: inside; display: inline-block; font-size: 26px;">
                   <li>
-                    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
+                    {% if pagination.href.previous %}<a href="/Project1-CPSC349-Group18{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
                   </li>
                   <li>
-                    {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}
+                    {% if pagination.href.next %}<a href="/Project1-CPSC349-Group18{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}
                   </li>
                 </div>
             </ul>

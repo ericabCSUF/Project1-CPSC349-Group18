@@ -1,37 +1,35 @@
----
-layout: base
-title: Mexico Gallery
-pagination:
-  data: photos.jfgzzl3.media
-  size: 1
----
-<header>
+
+<head>
+    <title>Mexico Gallery - CPSC 349 - Fall 2022 - Project 1</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+</head>
+
+<body>
+    <header>
   <div style="text-align: left; font-size: 28px;">
     <large>
       <a href="/Project1-CPSC349-Group18/">Home</a>
       <a href="Project1-CPSC349-Group18/about/">&emsp; About Us</a>
     </large>
   </div>
-  <h1>{{ title }}</h1>
+  <h1>Mexico Gallery</h1>
 </header>
 
 <body>
     <ul>
         <div style="text-align: center;">
-          {% for mex in pagination.items -%}
           <div style="text-align: center; font-size: 26px">
           <p>
-              {{ mex.alt }}
+              Cascada El Chuveje
           </p>
           </div>
-          <img src= "{{ mex.src.large }}" alt= "{{mex}}.alt}}">
+          <img src= "https://images.pexels.com/photos/11995419/pexels-photo-11995419.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt= "[object Object].alt}}">
           <div style="text-align: center; font-size: 24px">
           <p>
-              Photo by {{ mex.photographer }}
+              Photo by Axxel Hernandez
           </p>
           </div>
-          {% endfor -%}
-        </div>
+          </div>
     </ul>
     <br>
 
@@ -40,10 +38,10 @@ pagination:
             <ul>
                 <div style="text-align: center; list-style position: inside; display: inline-block; font-size: 26px;">
                   <li>
-                    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
+                    <a href="/mexico/51/">Previous</a>
                   </li>
                   <li>
-                    {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}
+                    <a href="/mexico/53/">Next</a>
                   </li>
                 </div>
             </ul>
@@ -61,3 +59,5 @@ pagination:
     </p>
     </div>
 </footer>
+
+</body>

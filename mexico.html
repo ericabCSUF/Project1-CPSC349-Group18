@@ -1,0 +1,63 @@
+---
+layout: base
+title: Mexico Gallery
+pagination:
+  data: photos.jfgzzl3.media
+  size: 1
+---
+<header>
+  <div style="text-align: left; font-size: 28px;">
+    <large>
+      <a href="http://localhost:8080//">Home</a>
+      <a href="http://localhost:8080/about/">&emsp; About Us</a>
+    </large>
+  </div>
+  <h1>{{ title }}</h1>
+</header>
+
+<body>
+    <ul>
+        <div style="text-align: center;">
+          {% for mex in pagination.items -%}
+          <div style="text-align: center; font-size: 26px">
+          <p>
+              {{ mex.alt }}
+          </p>
+          </div>
+          <img src= "{{ mex.src.large }}" alt= "{{mex}}.alt}}">
+          <div style="text-align: center; font-size: 24px">
+          <p>
+              Photo by {{ mex.photographer }}
+          </p>
+          </div>
+          {% endfor -%}
+        </div>
+    </ul>
+    <br>
+
+    <nav>
+        <div style="width: 100%; text-align: center">
+            <ul>
+                <div style="text-align: center; list-style position: inside; display: inline-block; font-size: 26px;">
+                  <li>
+                    {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}
+                  </li>
+                  <li>
+                    {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}
+                  </li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+</body>
+
+<footer>
+    <hr>
+    <div style="text-align: center;"
+    <p>
+        <small>
+          <a href="https://www.pexels.com">Photos provided by Pexels</a>
+        </small>
+    </p>
+    </div>
+</footer>

@@ -20,14 +20,14 @@ title: Home
       <br>
 
       <div style="text-align: center; font-size: 40px;">
-        <a href="{{ '/Project1-CPSC349-Group18/_site/mexico' | url }}">Mexico Gallery</a>
+        <a href="/Project1-CPSC349-Group18/_site/mexico">Mexico Gallery</a>
       </div>
       <br>
       <div style="text-align: center; font-size: 28px;">
         Stunning pictures of Mexican culture
       </div>
       {% for mex in photos.jfgzzl3.media -%}
-      <a href="{{ 'http://localhost:8080/Project1-CPSC349-Group18/_site/mexico.html' | url }}">
+      <a href="http://localhost:8080/Project1-CPSC349-Group18/_site/mexico.html">
         <img src= "{{ mex.src.tiny }}">
         {% endfor -%}
       </a>
